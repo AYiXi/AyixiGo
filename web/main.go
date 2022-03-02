@@ -29,7 +29,7 @@ func main() {
 	r.POST("/user/:name/*action", func(c *gin.Context) {
 		b := c.FullPath() == "/user/:name/*action"
 		c.String(http.StatusOK, "%t", b)
-		
+
 	})
 
 	r.Run()
